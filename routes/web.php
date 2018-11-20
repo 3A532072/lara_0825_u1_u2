@@ -51,11 +51,17 @@ Route::get('/', function () {
     $featuredPosts = \App\Post::where('is_feature', 1)->get();
     dd($featuredPosts);*/
 
-    //model
+    /*model
     $sixthPost = \App\Post::find(6);
     dd($sixthPost);
     $lastPost = \App\Post::orderBy('id', 'DESC')->first();
-    dd($lastPost);
+    dd($lastPost);*/
+
+    //顯示
+    $post = \App\Post::find(7);
+    foreach($post->comments as $comment) {
+        echo $comment->content.'<br>';
+    }
 
 
     //dd($posts);
