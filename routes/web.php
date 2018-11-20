@@ -34,10 +34,16 @@ Route::get('/', function () {
     $post->update([
         'title' => 'updated title',
         'content' => 'updated content',
-    ]);*/
+    ]);
+
     $post->title = 'saved title';
     $post->content = 'saved content';
-    $post->save();
+    $post->save();*/
+
+    //刪除資料
+    $post->delete();
+    
+
     //dd($posts);
 
 
