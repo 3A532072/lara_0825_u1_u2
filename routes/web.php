@@ -25,8 +25,10 @@ Route::get('/', function () {
     $post->content='testcontent';
     $post->save();*/
 
-    //查詢資料
-    $posts = \App\Post::all();
+    /*查詢資料
+    $posts = \App\Post::all();*/
+    $posts = \App\Post::find(1);
     dd($posts);
+
 
 ]});
