@@ -27,8 +27,8 @@ Route::get('/', function () {
 
     /*查詢資料
     $posts = \App\Post::all();
-    $posts = \App\Post::where('id', '<', 10)->orderBy('id', 'DESC')->get();*/
-    $post = \App\Post::find(1);
+    $posts = \App\Post::where('id', '<', 10)->orderBy('id', 'DESC')->get();
+    $post = \App\Post::find(1);*/
 
     /*更新資料
     $post->update([
@@ -40,9 +40,9 @@ Route::get('/', function () {
     $post->content = 'saved content';
     $post->save();*/
 
-    //刪除資料
-    $post->delete();
-    
+    /*刪除資料
+    $post->delete();*/
+    \App\Post::destroy(2);
 
     //dd($posts);
 
