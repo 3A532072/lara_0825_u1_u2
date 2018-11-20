@@ -42,8 +42,14 @@ Route::get('/', function () {
 
     /*刪除資料
     $post->delete();
-    \App\Post::destroy(2);*/
-    \App\Post::destroy(3,4,5);
+    \App\Post::destroy(2);
+    \App\Post::destroy(3,4,5);*/
+
+    //collection
+    $allPosts = \App\Post::all();
+    dd($allPosts);
+    $featuredPosts = \App\Post::where('is_feature', 1)->get();
+    dd($featuredPosts);
 
 
     //dd($posts);
