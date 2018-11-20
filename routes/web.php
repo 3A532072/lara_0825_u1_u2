@@ -27,9 +27,15 @@ Route::get('/', function () {
 
     /*查詢資料
     $posts = \App\Post::all();
-    $posts = \App\Post::find(1);*/
-    $posts = \App\Post::where('id', '<', 10)->orderBy('id', 'DESC')->get();
-    dd($posts);
+    $posts = \App\Post::where('id', '<', 10)->orderBy('id', 'DESC')->get();*/
+    $post = \App\Post::find(1);
+
+    //更新資料
+    $post->update([
+        'title' => 'updated title',
+        'content' => 'updated content',
+    ]);
+    //dd($posts);
 
 
 ]});
