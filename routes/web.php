@@ -26,8 +26,9 @@ Route::get('/', function () {
     $post->save();*/
 
     /*查詢資料
-    $posts = \App\Post::all();*/
-    $posts = \App\Post::find(1);
+    $posts = \App\Post::all();
+    $posts = \App\Post::find(1);*/
+    $posts = \App\Post::where('id', '<', 10)->orderBy('id', 'DESC')->get();
     dd($posts);
 
 
