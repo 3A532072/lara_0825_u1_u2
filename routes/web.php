@@ -13,15 +13,20 @@
 
 Route::get('/', function () {
     //return view('welcome');
-    /*\App\Post::create([
+    /*新增資料
+    \App\Post::create([
         'title'=>'testtitle',
         'content'=>'testcontent',
     ]);
-    ]);*/
+    ]);
 
     $post=new \App\Post();
     $post->title='testtitle';
     $post->content='testcontent';
-    $post->save();
+    $post->save();*/
+
+    //查詢資料
+    $posts = \App\Post::all();
+    dd($posts);
 
 ]});
