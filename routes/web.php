@@ -41,8 +41,10 @@ Route::get('/', function () {
     $post->save();*/
 
     /*刪除資料
-    $post->delete();*/
-    \App\Post::destroy(2);
+    $post->delete();
+    \App\Post::destroy(2);*/
+    \App\Post::destroy(3,4,5);
+
 
     //dd($posts);
 
